@@ -1,15 +1,15 @@
-//Skirt.java
+//LondonBroil.java
 
 package meatpackage;
 
-public class Skirt extends Primal {
+public class LondonBroil extends Primal {
 
-	public Skirt() {
+	public LondonBroil() {
 		super.type = MeatType.Skirt;
 		super.meatCat = MeatCategory.Thin;
 		super.dryAged = false;
-		super.code = 94960;
-		this.priceSold = 13.99;
+		super.code = 94826;
+		this.priceSold = 7.99;
 		super.weightInv = 0.00;
 	}//end constructor
 

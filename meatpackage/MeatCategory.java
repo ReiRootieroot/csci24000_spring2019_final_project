@@ -6,7 +6,8 @@ public enum MeatCategory {
 	
 	Middle,
 	Thin,
-	Rounds,
-	Chuck
-
+	Round,
+	Chuck,
+	Offal,
+	GrassFed
 }; //end MeatCategory

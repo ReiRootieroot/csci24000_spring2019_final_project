@@ -7,3 +7,4 @@ run: main.class
 clean:
 	rm -r *.class
 	rm -r ./meatpackage/*.class
+	rm -r ./meatpackage/enumpackage/*.class
