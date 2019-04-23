@@ -11,6 +11,7 @@ public class BeefStew extends Primal {
 		super.code = 98041;
 		this.priceSold = 6.99;
 		super.weightInv = 0.00;
+		super.name = "Beef Stew";
 	}//end constructor
 
 }//end Skirt

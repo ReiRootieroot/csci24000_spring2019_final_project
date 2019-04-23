@@ -11,6 +11,7 @@ public class LondonBroil extends Primal {
 		super.code = 94826;
 		this.priceSold = 7.99;
 		super.weightInv = 0.00;
+		super.name = "London Broil";
 	}//end constructor
 
 }//end Skirt
