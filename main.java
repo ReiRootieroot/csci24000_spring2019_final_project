@@ -71,6 +71,7 @@ public class main implements Serializable{
 		
 			if(option == 1) {
 				mainmenu.EnterIntoInventory(arrayP, arrayT, weightmenu, transID);
+				transID++;
 			}
 			if(option == 2) {
 				transarray.ListAll(arrayT);
