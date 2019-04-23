@@ -14,23 +14,6 @@ public class MainMenu implements Serializable {
 		;
 	}//end constructor
 
-	public void Populate(ArrayList<Primal> arrayP) {
-		Primal meat = new BottomRound();
-		arrayP.add(meat);
-		meat = new BeefStew();
-		arrayP.add(meat);
-		meat = new Brisket();
-		arrayP.add(meat);
-		meat = new Chuck();
-		arrayP.add(meat);
-		meat = new DARibeyeBless();
-		arrayP.add(meat);
-		meat = new Flank();
-		arrayP.add(meat);
-
-
-	}//end Populate
-
 	public void UserSerial(ArrayList<Primal> arrayP, ArrayList<TransClass> arrayT, WeightMenu weightmenu) {
 
 		String str = "";
