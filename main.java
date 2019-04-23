@@ -22,11 +22,13 @@ public class main {
 		arrayP.add(new BeefStew());
 		Primal meat = arrayP.get(0);
 		Primal meat1 = arrayP.get(1);
-		arrayT.add(new TransClass(meat, 9.00, true));
-		arrayT.add(new TransClass(meat1, 14.00, true));
+		arrayT.add(new TransClass(meat, 9.00, true, 10001));
+		arrayT.add(new TransClass(meat1, 14.00, true, 10002));
 
 		transarray.ListAll(arrayT);
-
+		transarray.RemoveTrans(arrayT, arrayP, 10001);
+		System.out.println();
+		transarray.ListAll(arrayT);
 		/*
 		try {	
 			FileWriter outFile = new FileWriter("HistoryTrans.txt"); //add ",true" to append;
