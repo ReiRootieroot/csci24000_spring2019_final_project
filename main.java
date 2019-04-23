@@ -46,38 +46,12 @@ public class main implements Serializable{
 		arrayP.add(new GFRibeyeBless());
 
 
-		mainmenu.UserSerial(arrayP, arrayT,weightmenu);
-
-		/*
-		try {
-                        FileInputStream file = new FileInputStream("SavedArrayP.txt");
-                        ObjectInputStream in = new ObjectInputStream(file);
-
-                        arrayP = (ArrayList<Primal>)in.readObject();
-
-                        in.close();
-                        file.close();
-
-                } catch(IOException e) {
-                        System.out.println(e);
-                } catch(ClassNotFoundException ex) {
-                        System.out.println(ex);
-                }//
-	
-		try {
-                        FileInputStream file = new FileInputStream("SavedArrayT.txt");
-                        ObjectInputStream in = new ObjectInputStream(file);
-
-                        arrayT = (ArrayList<TransClass>)in.readObject();
-
-                        in.close();
-                        file.close();
-
-                } catch(IOException e) {
-                        System.out.println(e);
-                } catch(ClassNotFoundException ex) {
-                        System.out.println(ex);
-                }//*/
+		//mainmenu.UserSerial(arrayP, arrayT,weightmenu);
+		/*NOTE: Serial option was not working at this point. The program should work fine without it.
+			As such, I've went ahead and commented this line.
+			
+			This is an odd program, so I don't recommend troubleshooting. Let this be a display of my attempt at serialization for this project.
+		*/
 			
 		int option = 0;
 		boolean keepGoing = true;
