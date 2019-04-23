@@ -12,6 +12,7 @@ public abstract class Primal implements java.io.Serializable {
 	protected double priceBought;
 	protected double priceSold;
 	protected int code;
+	protected String name;
 
 	Primal() {
 		type = MeatType.Bottom;
@@ -21,28 +22,37 @@ public abstract class Primal implements java.io.Serializable {
 		priceBought = 0.00;
 		priceSold = 0.00;
 		code = 00000;
+		name = "";
 	}//end constructor
 
-	public void addWeight(double weight) {
+	public void AddWeight(double weight) {
 		this.weightInv += weight;
 	}//end addWeight
 
-	public void subtractWeight(double weight) {
+	public void SubtractWeight(double weight) {
 		this.weightInv -= weight;
 	}//end subtractWeight	
 	
-	public double getWeight() {
+	public double GetWeight() {
 		return this.weightInv;
 	}//end getWeight
 
-	public boolean ifGrassFed() {
+	public boolean IfGrassFed() {
 		if (this.meatCat == MeatCategory.GrassFed)
 			return true;
 		else
 			return false;
 	}//end ifGrassFed
 
-	public void setDryAged() {
+	public void SetDryAged() {
 		this.dryAged = true;
 	}//end setDryAged
+
+	public String GetName() {
+		return this.name;
+	}//end GetName
+
+	public int GetItemCode() {
+		return this.code;
+	}//end GetItemCode
 }//end Primal

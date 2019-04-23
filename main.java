@@ -16,8 +16,12 @@ public class main {
 	public main() {
 		array.add(new Skirt());	
 		array.add(new BeefStew());
-		
-		weightmenu.GetInput();
+	
+		int a = array.get(0).GetItemCode();
+		double weight = array.get(0).GetWeight();
+		String name = array.get(0).GetName();
+		String blah = "Item Code: " + a + ", (" + name + "), Weight: " + weight;
+		weightmenu.Validate(blah);
 	}//end constructor
 
 }//end mainClass
