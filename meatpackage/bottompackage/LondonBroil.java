@@ -5,8 +5,8 @@ package meatpackage;
 public class LondonBroil extends Primal {
 
 	public LondonBroil() {
-		super.type = MeatType.Skirt;
-		super.meatCat = MeatCategory.Thin;
+		super.type = MeatType.Bottom;
+		super.meatCat = MeatCategory.Round;
 		super.dryAged = false;
 		super.code = 94826;
 		this.priceSold = 7.99;
@@ -15,4 +15,4 @@ public class LondonBroil extends Primal {
 		super.needTrim = false;
 	}//end constructor
 
-}//end Skirt
+}//end LondonBroil

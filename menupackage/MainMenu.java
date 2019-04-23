@@ -14,6 +14,10 @@ public class MainMenu implements Serializable {
 		;
 	}//end constructor
 
+	public void Populate(ArrayList<Primal> arrayP) {
+
+	}//end Populate
+
 	public int GetOption(int min, int max) {
 
 		String str = "";

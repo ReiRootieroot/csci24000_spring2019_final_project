@@ -55,7 +55,7 @@ public class WeightMenu implements Serializable {
                                         System.out.println("\nNot a valid code. Please enter a number between 10000-99999.");
                                 }
                         } catch(NumberFormatException e) {
-                                System.out.println("\nPlease enter an item number.");
+                                System.out.println("\nPlease enter a transaction ID.");
                         } //end trycatch
                 }//end while
 

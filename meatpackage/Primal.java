@@ -55,20 +55,21 @@ public abstract class Primal implements Serializable {
 		return this.code;
 	}//end GetItemCode
 
-	public void WritePrimal() {
+	public void ListPrimal() {
+                System.out.print(this.code + "\t");
+                System.out.print(this.name + "\t");
+                System.out.print(this.weightInv + "\t");
+                System.out.print(this.type + "\t");
+                System.out.print(this.priceSold + "\n");
+        }//end ListPrimal
 
-		try {
-			FileWriter outFile = new FileWriter("CurrentInv");
-			PrintWriter output = new PrintWriter(outFile);		
-	
-			output.print(this.code + "\t");
-			output.print(this.name + "\t");
-			output.print(this.weightInv + "\t");
-			output.print(this.type + "\t");
-			output.print(this.priceBought + "\n");
-		} catch(IOException e) {
-			System.out.println("File not found.");
-		}//trycatch
+	public void WritePrimal(PrintWriter output) {
+		output.print(this.code + "\t");
+		output.print(this.name + "\t");
+		output.print(this.weightInv + "\t");
+		output.print(this.type + "\t");
+		output.print(this.priceSold + "\n");
+		
 	}//end WritePrimal
 
 	public boolean GetNeedTrim() {

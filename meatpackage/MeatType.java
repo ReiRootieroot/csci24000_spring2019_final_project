@@ -16,6 +16,6 @@ public enum MeatType {
 	NYStrip,
 	Top,
 	Tenderloin,
-	ShortLoin
+	Flank
 
 };//end MeatType

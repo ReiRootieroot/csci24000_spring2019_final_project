@@ -55,8 +55,6 @@ public class TransArray {
 				arrayT.remove(i);
 				i = length; //stop for loop
 			}
-			else
-				System.out.println("\nTransaction ID not found. Nothing was changed.");
 		}//end for
 
 		if(IDFound) {
@@ -67,7 +65,7 @@ public class TransArray {
 				
 				if(codeCheck == itemCode) {
 					name = arrayP.get(i).GetName();
-					str = "\nThe removal will be of " + weight + "lb. of " + codeCheck + ", " + name + ".";
+					str = "\nThe removal will be of " + weight + " lb. of " + codeCheck + ", " + name + ".";
 					continueProcess = weightmenu.Validate(str);
 					
 					if(continueProcess) {
@@ -90,6 +88,8 @@ public class TransArray {
 				
 			}//end for
 		}//end if
+		else
+			System.out.println("\nTransaction ID not found. Nothing was changed.");
 	}//end RemoveTrans
 	
 }//end TransArray
