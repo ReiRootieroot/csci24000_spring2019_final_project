@@ -12,6 +12,7 @@ public class Skirt extends Primal {
 		this.priceSold = 13.99;
 		super.weightInv = 0.00;
 		super.name = "Skirt Steak";
+		super.needTrim = false;
 	}//end constructor
 
 }//end Skirt

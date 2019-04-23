@@ -2,6 +2,7 @@
 
 package transpackage;
 import meatpackage.*;
+import menupackage.*;
 import java.util.*;
 import java.io.*;
 
@@ -31,7 +32,9 @@ public class TransArray {
 			return 0;
 	}//end ListAll
 
-	public void RemoveTrans(ArrayList<TransClass> arrayT, ArrayList<Primal> arrayP, int id) {
+	public void RemoveTrans(ArrayList<TransClass> arrayT, ArrayList<Primal> arrayP, int id, WeightMenu weightmenu) {
+		String str = "";
+		String name = "";
 		int length = arrayT.size();
 		int idArrayT = 0;
 		int itemCode = 0;
@@ -39,7 +42,8 @@ public class TransArray {
 		double weight = 0.00;
 		boolean IDFound = false;
 		boolean removeTrue = false; //check whether if meat was taken out from the inventory
-
+		boolean continueProcess = false;
+	
 		for(int i = 0; i < length; i++) {
 			idArrayT = arrayT.get(i).GetID();
 
@@ -61,17 +65,25 @@ public class TransArray {
 			for(int i = 0; i < length; i++) {
 				codeCheck = arrayP.get(i).GetItemCode();
 				
-				if(codeCheck == itemCode) {			
-					System.out.print("\nTransanction deleted. " + weight + " lb.");
+				if(codeCheck == itemCode) {
+					name = arrayP.get(i).GetName();
+					str = "\nThe removal will be of " + weight + "lb. of " + codeCheck + ", " + name + ".";
+					continueProcess = weightmenu.Validate(str);
+					
+					if(continueProcess) {
+						System.out.print("\nTransanction deleted. " + weight + " lb.");
 
-					if(removeTrue) {				
-						arrayP.get(i).AddWeight(weight);
-						System.out.print(" added back into inventory.");
+						if(removeTrue) {				
+							arrayP.get(i).AddWeight(weight);
+							System.out.println(" added back into inventory.");
+						}
+						else {
+							arrayP.get(i).SubtractWeight(weight);
+							System.out.println(" subtracted from inventory.");
+						}
 					}
-					else {
-						arrayP.get(i).SubtractWeight(weight);
-						System.out.println(" subtracted from inventory.");
-					}
+					else
+						System.out.println("No changes were made. Returning to main menu.");
 					
 					i = length; //stop for loop
 				}//end if

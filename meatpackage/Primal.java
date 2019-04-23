@@ -9,6 +9,7 @@ public abstract class Primal implements Serializable {
 	protected MeatType type;
 	protected MeatCategory meatCat;
 	protected boolean dryAged;
+	protected boolean needTrim;
 	protected double weightInv;
 	protected double priceBought;
 	protected double priceSold;
@@ -18,6 +19,7 @@ public abstract class Primal implements Serializable {
 	Primal() {
 		type = MeatType.Bottom;
 		meatCat = MeatCategory.Thin;
+		needTrim = false;
 		dryAged = false;
 		weightInv = 0.00;
 		priceBought = 0.00;
@@ -45,10 +47,6 @@ public abstract class Primal implements Serializable {
 			return false;
 	}//end ifGrassFed
 
-	public void SetDryAged() {
-		this.dryAged = true;
-	}//end setDryAged
-
 	public String GetName() {
 		return this.name;
 	}//end GetName
@@ -57,13 +55,23 @@ public abstract class Primal implements Serializable {
 		return this.code;
 	}//end GetItemCode
 
-	public void WritePrimal(PrintWriter output) {
+	public void WritePrimal() {
 
-		output.print(this.code + "\t");
-		output.print(this.name + "\t");
-		output.print(this.weightInv + "\t");
-		output.print(this.type + "\t");
-		output.print(this.priceBought + "\n");
+		try {
+			FileWriter outFile = new FileWriter("CurrentInv");
+			PrintWriter output = new PrintWriter(outFile);		
 	
+			output.print(this.code + "\t");
+			output.print(this.name + "\t");
+			output.print(this.weightInv + "\t");
+			output.print(this.type + "\t");
+			output.print(this.priceBought + "\n");
+		} catch(IOException e) {
+			System.out.println("File not found.");
+		}//trycatch
 	}//end WritePrimal
+
+	public boolean GetNeedTrim() {
+		return this.needTrim;
+	}//end GetNeedTrim
 }//end Primal

@@ -10,13 +10,13 @@ public class TransClass {
 	Primal meat;
 	double weight;
 	Calendar cal = Calendar.getInstance();
-	boolean remove;
+	boolean addTrue;
 	int id;
 
-	public TransClass(Primal meat, double weight, boolean remove, int id) {
+	public TransClass(Primal meat, double weight, boolean addTrue, int id) {
 		this.meat = meat;
 		this.weight = weight;
-		this.remove = remove;
+		this.addTrue = addTrue;
 		this.id = id;
 	}//end constructor
 
@@ -25,32 +25,38 @@ public class TransClass {
                 System.out.print(this.id + "\t");
 		System.out.print(this.meat.GetName() + "\t");
                 
-		if(remove)
+		if(addTrue)
 			System.out.print("-");
 		
 		System.out.print(this.weight + "\t");
                 System.out.print(cal.getTime() + "\n");
 	}//end ListTrans
 
-	public void WriteTrans(PrintWriter output) {
+	public void WriteTrans() {
+	
+		try {
+			FileWriter outFile = new FileWriter("HistoryTrans.txt");
+			PrintWriter output = new PrintWriter(outFile);
+	
+		 	output.append(this.meat.GetItemCode() + "\t");
+			output.append(this.id + "\t");
+			output.append(this.meat.GetName() + "\t");
 		
-	 	output.print(this.meat.GetItemCode() + "\t");
-		output.print(this.id + "\t");
-		output.print(this.meat.GetName() + "\t");
+			if(!addTrue)
+				output.append("-");
 		
-		if(remove)
-			output.print("-");
-		
-		output.print(this.weight + "\t");
-		output.print(cal.getTime() + "\n");
-	}//end WriteTrans
+			output.append(this.weight + "\t");
+			output.append(cal.getTime() + "\n");
 
-	public void SetEnterRemove(boolean remove) {
-		this.remove = remove;
-	}//end SetEnterRemove
+			outFile.close();
+			output.close();
+		}catch (IOException e) {
+			System.out.println("File not found.");
+		}//end trycatch
+	}//end WriteTrans
 	
 	public boolean GetEnterRemove() {
-		return this.remove;
+		return this.addTrue;
 	}//end GetEnterRemove
 
 	public int GetID() {

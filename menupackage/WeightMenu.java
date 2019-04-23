@@ -13,7 +13,7 @@ public class WeightMenu implements Serializable {
 		;
 	}//end constructor
 
-	public int GetItem() {
+	public int GetItemCode() {
 		String str = "";
                 boolean keepGoing = true;
                 int numCheck = 0;
@@ -27,8 +27,7 @@ public class WeightMenu implements Serializable {
                                 if(numCheck >= 10000 && numCheck <= 99999)
                                         keepGoing = false;
                                 else {
-                                        System.out.println("\nNot a valid code. Exiting...\n");
-					keepGoing = false;
+                                        System.out.println("\nNot a valid code. Please enter a number between 10000-99999.");
 				}
                         } catch(NumberFormatException e) {
                                 System.out.println("\nPlease enter an item number.");
@@ -39,10 +38,36 @@ public class WeightMenu implements Serializable {
 		
 	}//end GetItem
 
-	public int GetPrimalTrim() {
+	public int GetTransID() {
+                String str = "";
+                boolean keepGoing = true;
+                int numCheck = 0;
+
+                while(keepGoing) {
+                        try {
+                                System.out.print("Enter transaction ID: ");
+                                str = input.nextLine();
+                                numCheck = Integer.parseInt(str);
+
+                                if(numCheck >= 10000 && numCheck <= 99999)
+                                        keepGoing = false;
+                                else {
+                                        System.out.println("\nNot a valid code. Please enter a number between 10000-99999.");
+                                }
+                        } catch(NumberFormatException e) {
+                                System.out.println("\nPlease enter an item number.");
+                        } //end trycatch
+                }//end while
+
+                return numCheck;
+
+        }//end GetTransID
+
+	public boolean GetPrimalTrim() {
 		String str = "";
                 boolean keepGoing = true;
                 int numCheck = 0;
+		boolean response = false;
 
                 while(keepGoing) {
                         try {
@@ -59,15 +84,20 @@ public class WeightMenu implements Serializable {
                                 System.out.println("\nPlease enter a number between 1-2.");
                         } //end trycatch
                 }//end while
+		
+		if(numCheck == 1)
+                	response = true;
+		else if(numCheck == 2)
+			response = false;
 
-                return numCheck;
-
+		return response;
 	}//end GetPrimalTrim
 
-	public int GetEnterRemove() {
+	public boolean GetEnterRemove() {
 		String str = "";
 		boolean keepGoing = true;
 		int numCheck = 0;
+		boolean response = false;
 		
 		while(keepGoing) {
 			try {
@@ -85,8 +115,12 @@ public class WeightMenu implements Serializable {
 			} //end trycatch
 		}//end while
 			
-		return numCheck;
+		if(numCheck == 1)
+			response = true;
+		else if(numCheck == 2)
+			response = false;
 
+		return response;
 	}//end GetEnterRemove
 
 	public double GetWeight() {

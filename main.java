@@ -28,6 +28,10 @@ public class main {
 
 		int option = 0;
 		boolean keepGoing = true;
+		int codeInput = 0;
+		double weightInput = 0.00;
+		int transID = 10003;
+		int tempID = 0;
 
 		System.out.println("Welcome to the Meat Inventory System.");
 		
@@ -36,6 +40,17 @@ public class main {
 			System.out.println("1) Enter meat into inventory\t2) Cancel a transaction\t3) Transfer into RTC\t4) Output File\t5) Exit");
 
 		option = mainmenu.GetOption(1, 5);
+		
+		if(option == 1) {
+			mainmenu.EnterIntoInventory(arrayP, arrayT, weightmenu, transID);
+		}
+		if(option == 2) {
+			transarray.ListAll(arrayT);
+			tempID = weightmenu.GetTransID();
+			transarray.RemoveTrans(arrayT, arrayP, tempID, weightmenu);
+		}			
+
+
 		keepGoing = false;
 		/*
 		try {

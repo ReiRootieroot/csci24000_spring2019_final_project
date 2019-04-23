@@ -12,6 +12,7 @@ public class EyeofRoundRoast extends Primal {
 		this.priceSold = 6.99;
 		super.weightInv = 0.00;
 		super.name = "Eye of Round Roast";
+		super.needTrim = false;
 	}//end constructor
 
-}//end Skirt
+}//end EyeofRoundRoast
