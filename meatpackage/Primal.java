@@ -2,8 +2,9 @@
 
 package meatpackage;
 import java.util.*;
+import java.io.*;
 
-public abstract class Primal implements java.io.Serializable {
+public abstract class Primal implements Serializable {
 
 	protected MeatType type;
 	protected MeatCategory meatCat;
@@ -55,4 +56,14 @@ public abstract class Primal implements java.io.Serializable {
 	public int GetItemCode() {
 		return this.code;
 	}//end GetItemCode
+
+	public void WritePrimal(PrintWriter output) {
+
+		output.print(this.code + "\t");
+		output.print(this.name + "\t");
+		output.print(this.weightInv + "\t");
+		output.print(this.type + "\t");
+		output.print(this.priceBought + "\n");
+	
+	}//end WritePrimal
 }//end Primal

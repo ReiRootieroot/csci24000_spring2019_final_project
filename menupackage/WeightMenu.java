@@ -140,8 +140,4 @@ public class WeightMenu implements Serializable {
 		
 	}//end Validate
 
-	public void WriteInv(PrintWriter output) {
-
-	}//end WriteInv
-
 }//end WeightMenu
