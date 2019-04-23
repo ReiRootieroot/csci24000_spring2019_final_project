@@ -13,6 +13,7 @@ public class CrossCut extends ShortRibs {
 		super.weightInv = 0.00;
 		super.name = "Cross-Cut Short Ribs";
 		super.needTrim = true;
+		this.weightTrim = 0.00;
 	}//end constructor
 
 }//end CrossCut

@@ -9,10 +9,11 @@ import java.io.*;
 public class OutputFile {
 
 	public void DoOption(int option, ArrayList<TransClass> arrayT, ArrayList<Primal> arrayP) {
-		int length = arrayP.size();
 		
 		if(option == 1) {
-		
+	
+			int length = arrayP.size();
+	
 			for(int i = 0; i < length; i++)
 				arrayP.get(i).ListPrimal();
 	
@@ -31,6 +32,8 @@ public class OutputFile {
 			}//end trycatch
 		}
 		if(option == 2) {
+
+			int length = arrayT.size();
 			for(int i = 0; i < length; i++)
                                 arrayT.get(i).ListTrans();
 

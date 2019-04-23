@@ -6,7 +6,7 @@ public class BottomRound extends Primal {
 
 	protected double weightTrim;
 
-	public Skirt() {
+	public BottomRound() {
 		super.type = MeatType.Bottom;
 		super.meatCat = MeatCategory.Round;
 		super.dryAged = false;
@@ -14,8 +14,8 @@ public class BottomRound extends Primal {
 		this.priceSold = 7.99;
 		super.weightInv = 0.00;
 		super.name = "Bottom Round Primal";
-		super.needTrim = true;
-		super.weightTrim = 0.00;
+		super.needTrim = false;
+		this.weightTrim = 0.00;
 	}//end constructor
 
-}//end Skirt
+}//end BottomRound

@@ -1,10 +1,10 @@
-//RibeyeBless.java
+//DARibeyeBless.java
 
 package meatpackage;
 
-public class RibeyeBless extends Primal {
+public class DARibeyeBless extends Primal {
 
-	public RibeyeBless() {
+	public DARibeyeBless() {
 		super.type = MeatType.RibeyeBless;
 		super.meatCat = MeatCategory.Middle;
 		super.code = 23134;
@@ -14,4 +14,4 @@ public class RibeyeBless extends Primal {
 		super.needTrim = false;
 	}//end constructor
 
-}//end RibeyeBless
+}//end DARibeyeBless

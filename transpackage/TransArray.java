@@ -6,7 +6,7 @@ import menupackage.*;
 import java.util.*;
 import java.io.*;
 
-public class TransArray {
+public class TransArray implements Serializable{
 
 	public TransArray() {
 		;

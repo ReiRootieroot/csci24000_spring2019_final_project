@@ -1,2 +1,19 @@
-94960	Skirt Steak	0.0	Skirt	13.99
-98041	Beef Stew	13.14	Round	6.99
+92301	Bottom Round Primal	50.0	Bottom	7.99
+98041	Beef Stew	0.0	Bottom	6.99
+94746	Brisket Primal	0.0	Brisket	9.99
+98077	Chuck Primal	0.0	Chuck	6.99
+23134	Ribeye Boneless Dry-Aged Primal	0.0	RibeyeBless	19.99
+94036	Flank Primal	0.0	Flank	14.99
+95931	NY Primal	0.0	NYStrip	13.99
+95940	Ribeye Bone-In Primal	0.0	RibeyeBone	12.99
+90003	Ribeye Boneless Primal	0.0	RibeyeBless	13.99
+94926	Short Rib Primal	0.0	ShortRibs	8.99
+94935	Cross-Cut Short Ribs	0.0	ShortRibs	8.99
+94960	Skirt Primal	0.0	Skirt	13.99
+95936	Top Primal	0.0	Top	9.99
+52232	NY Dry-Aged Primal	20.0	NYStrip	19.99
+95929	Tenderloin Primal	0.0	Tenderloin	29.99
+95767	85% Ground Beef	0.0	Chuck	4.99
+95997	90% Grass-Fed Ground Beef	0.0	Chuck	7.99
+55775	Grass-Fed Top Primal	0.0	Top	9.99
+90158	Grass-Fed Ribeye Boneless Primal	0.0	RibeyeBless	18.99

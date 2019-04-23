@@ -5,7 +5,7 @@ import meatpackage.*;
 import java.util.*;
 import java.io.*;
 
-public class TransClass {
+public class TransClass implements Serializable{
 
 	Primal meat;
 	double weight;

@@ -3,6 +3,8 @@
 package meatpackage;
 
 public class Chuck extends Primal {
+
+	protected double weightTrim;
  
 	public Chuck() {
 		super.type = MeatType.Chuck;
@@ -13,6 +15,7 @@ public class Chuck extends Primal {
 		super.weightInv = 0.00;
 		super.name = "Chuck Primal";
 		super.needTrim = false;
+		this.weightTrim = 0.00;
 	}//end constructor
 
 }//end Chuck

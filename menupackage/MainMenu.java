@@ -15,8 +15,65 @@ public class MainMenu implements Serializable {
 	}//end constructor
 
 	public void Populate(ArrayList<Primal> arrayP) {
+		Primal meat = new BottomRound();
+		arrayP.add(meat);
+		meat = new BeefStew();
+		arrayP.add(meat);
+		meat = new Brisket();
+		arrayP.add(meat);
+		meat = new Chuck();
+		arrayP.add(meat);
+		meat = new DARibeyeBless();
+		arrayP.add(meat);
+		meat = new Flank();
+		arrayP.add(meat);
+
 
 	}//end Populate
+
+	public void UserSerial(ArrayList<Primal> arrayP, ArrayList<TransClass> arrayT, WeightMenu weightmenu) {
+
+		String str = "";
+                boolean yesSerial = false;
+
+		str = "Would you like to reload the previous system? (You will lose progress if you choose not to) (y/n): ";
+                
+		yesSerial = weightmenu.Validate(str);
+		if(yesSerial) {
+
+			try {
+                        	FileInputStream file = new FileInputStream("SavedArrayP.txt");
+                       		ObjectInputStream in = new ObjectInputStream(file);
+
+                        	arrayP = (ArrayList<Primal>)in.readObject();
+
+                        	in.close();
+                        	file.close();
+
+                	} catch(IOException e) {
+                        	System.out.println(e);
+                	} catch(ClassNotFoundException ex) {
+                        	System.out.println(ex);
+                	}//endtrycatch
+
+                	try {
+                        	FileInputStream file = new FileInputStream("SavedArrayT.txt");
+                        	ObjectInputStream in = new ObjectInputStream(file);
+
+                        	arrayT = (ArrayList<TransClass>)in.readObject();
+
+                        	in.close();
+                        	file.close();
+
+                	} catch(IOException e) {
+                        	System.out.println(e);
+                	} catch(ClassNotFoundException ex) {
+				System.out.println(ex);
+                	}//end trycatch
+
+		}//end if
+
+	}//end UserSerial
 
 	public int GetOption(int min, int max) {
 
