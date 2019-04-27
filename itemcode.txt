@@ -1,0 +1,20 @@
+Code	Item
+
+98041	Beef Stew
+92301	Bottom Round Primal
+94746	Brisket Primal
+98077	Chuck Primal
+94935	Cross-Cut Short Ribs
+52232	NY Dry-Aged Primal
+23134	Ribeye Boneless Dry-Aged Primal
+94036	Flank Primal
+95997	90% Grass-Fed Ground Beef
+90158	Grass-Fed Ribeye Boneless Primal
+55775	Grass-Fed Top Primal
+95767	85% Ground Beef
+95931	NY Primal
+95940	Ribeye Bone-In Primal
+94926	Short Rib Primal
+94960	Skirt Primal
+95929	Tenderloin Primal
+95936	Top Primal
